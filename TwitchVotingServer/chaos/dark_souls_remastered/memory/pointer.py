@@ -24,6 +24,7 @@ class PointerOffsets:
             HEAD_SIZE = [0x10, 0x388]
             ARM_SIZE = [0x10, 0x394]
 
+
         class Animations:
             SLIDE = [0x68, 0x68, 0x48, 0x45C]
 
@@ -49,7 +50,7 @@ class Pointer:
             def head_size(pm, BaseB):
                 return _get_pointer(pm, BaseB, PointerOffsets.Player.Body.HEAD_SIZE)
             def arm_size(pm, BaseB):
-                return _get_pointer(pm, BaseB, PointerOffsets.Player.Arm.ARM_SIZE)
+                return _get_pointer(pm, BaseB, PointerOffsets.Player.Body.ARM_SIZE)
 
         class Animations:
             def slide(pm, BaseX):

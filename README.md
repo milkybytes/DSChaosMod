@@ -34,3 +34,5 @@ In the TwitchVotingOverlay directory you will find an HTML file that can be view
 `Pause` will pause the voting state so that it may be resumed again with `Start`.
 
 `Stop` will stop the voting handler as well as the Twitch bot.
+ 
+ :)

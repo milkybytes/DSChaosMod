@@ -8,6 +8,7 @@ class DarkSoulsRemastered:
 
     effects = [
         BigHead,
+        BigArm,
         Blind,
         LowerDrawDistance,
         DisableHUD,

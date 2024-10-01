@@ -2,15 +2,15 @@
 port = 7890
 
 [VOTING]
-VOTING_DURATION = 60
-EFFECT_DURATION = 60
+VOTING_DURATION = 15
+EFFECT_DURATION = 15
 
 [TWITCH]
-CHANNEL = ""
-TMI_TOKEN = ""
+CHANNEL = "IncognitusAU"
+TMI_TOKEN = "oauth:ad66pjmjvu9kbku98oa7uyq6fu45jd"
 
 [GUI]
-STAY_ON_TOP = true
+STAY_ON_TOP = false
 THEME = "dark"
 
 [GAME_CONFIGS]

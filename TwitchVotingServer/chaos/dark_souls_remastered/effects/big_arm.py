@@ -9,7 +9,7 @@ class BigArm(DSREffect):
     print("in the big arm class")
     async def _set_arm_size(self, size):
         BaseB = BaseAddress.BaseB(self.pm, self.module)
-        arm_pointer = Pointer.Player.Arm.arm_size(self.pm, BaseB)
+        arm_pointer = Pointer.Player.Body.arm_size(self.pm, BaseB)
         memory.write_float(self.pm.process_handle, arm_pointer, size)
         print("setting arm size")
     async def _on_start(self):

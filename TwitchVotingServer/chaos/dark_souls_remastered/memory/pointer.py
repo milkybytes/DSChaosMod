@@ -22,8 +22,6 @@ class PointerOffsets:
 
         class Body:
             HEAD_SIZE = [0x10, 0x388]
-
-        class Arm:
             ARM_SIZE = [0x10, 0x394]
 
         class Animations:
@@ -50,8 +48,6 @@ class Pointer:
         class Body:
             def head_size(pm, BaseB):
                 return _get_pointer(pm, BaseB, PointerOffsets.Player.Body.HEAD_SIZE)
-        
-        class Arm:
             def arm_size(pm, BaseB):
                 return _get_pointer(pm, BaseB, PointerOffsets.Player.Arm.ARM_SIZE)
 

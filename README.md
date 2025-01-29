@@ -8,7 +8,9 @@ Visit the [Wiki](https://github.com/milkytoasto/DSChaosMod/wiki) for specific de
 
 ## Installing
 
-1. Clone the repository using `git clone https://github.com/milkytoasto/DSChaosMod.git`
+Note: This repository uses Python v3.9 and may not be compatible with later Python versions.
+
+1. Clone the repository
 2. Go into the project root directory with `cd DSChaosMod`
 3. `pip install poetry` to get the Poetry dependency
 4. `poetry install` to get both base and dev dependencies

@@ -87,9 +87,11 @@ class GUISettings(ttk.Frame):
 
         self.toggle_stay_on_top_button = ttk.Button(
             self,
-            style="ToggleButton.On.TButton"
-            if not self.stay_on_top
-            else "ToggleButton.Off.TButton",
+            style=(
+                "ToggleButton.On.TButton"
+                if not self.stay_on_top
+                else "ToggleButton.Off.TButton"
+            ),
             text="Stay On Top",
             command=self.handle_stay_on_top,
         )

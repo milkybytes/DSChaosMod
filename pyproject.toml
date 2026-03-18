@@ -4,20 +4,21 @@ version = "0.1.0"
 description = "Twitch integration for Dark Souls."
 authors = ["MILKYTOASTO"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4.0"
+python = ">=3.10,<4.0"
 websockets = ">=10.3"
 async-tkinter-loop = ">=0.6.0"
-twitchio = ">=2.5.0"
+twitchio = ">=2.5.0,<3.0.0"
 pymem = ">=1.8.3"
 psutil = "*"
 requests = "^2.32.4"
 toml = "^0.10.2"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pre-commit = "*"
-pytest = "^7.3.0"
+pytest = "^9.0.0"
 
 [build-system]
 requires = ["poetry-core"]

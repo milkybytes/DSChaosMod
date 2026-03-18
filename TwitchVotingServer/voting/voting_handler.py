@@ -44,7 +44,7 @@ class VotingHandler:
             message_handler=self._broadcast_votes,
         )
 
-        loop = asyncio.get_event_loop()
+        loop = asyncio.get_running_loop()
         twitch_task = loop.create_task(self.bot.start(), name="Twitch Task")
         voting_task = loop.create_task(self._voting_controller(), name="Voting Task")
         effect_task = loop.create_task(
@@ -174,9 +174,9 @@ class VotingHandler:
         broadcast_message = {
             "ACCEPTING_VOTES": self.accepting_votes,
             "REMAINING_TIME": self.remaining_time,
-            "DURATION": self.voting_duration
-            if self.accepting_votes
-            else self.effect_duration,
+            "DURATION": (
+                self.voting_duration if self.accepting_votes else self.effect_duration
+            ),
             "VOTES": self.votes,
         }
         broadcast_message = json.dumps(broadcast_message)

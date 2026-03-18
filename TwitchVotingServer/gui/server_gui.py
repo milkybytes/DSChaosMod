@@ -45,7 +45,7 @@ class ServerGUI(ChaosTheme):
         self._init_frames()
         self._init_commands()
 
-        async_handler(websocket_server)()
+        self.root.after(0, async_handler(websocket_server))
 
     def _init_frames(self):
         tabs_frame = tk.Frame(self.root, pady=4, padx=4)

@@ -90,7 +90,7 @@ class TwitchBot(commands.Bot):
     def get_effect(self):
         max_value = -1
         results = {}
-        for (key, value) in self.votes.items():
+        for key, value in self.votes.items():
             count = len(value["votes"])
             if count > max_value:
                 results = {}

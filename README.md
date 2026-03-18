@@ -8,11 +8,11 @@ Visit the Wiki for specific details on contributing to this application.
 
 ## Installing
 
-Note: This repository uses Python v3.9 and may not be compatible with later Python versions.
+Note: This repository uses and has been tested on Python 3.14.
 
 1. Clone the repository
 2. Go into the project root directory with `cd DSChaosMod`
-3. `pip install poetry` to get the Poetry dependency
+3. Follow the docs at https://python-poetry.org/docs/ to install poetry for your respective OS.
 4. `poetry install` to get both base and dev dependencies
 5. `poetry run pre-commit install` to install the pre-commit hooks
 6. `poetry run pre-commit run -a` to run the pre-commit hooks. This will make sure they are operating as expected.
@@ -23,7 +23,7 @@ At this time I would recommend running `git update-index --assume-unchanged .\Tw
 
 ## Usage
 
-Currently there is a GUI server that can be initiated by running the `server.py` file. 
+Currently there is a GUI server that can be initiated by running `poetry run python TwitchVotingServer/server.py` from the project root.
 
 In the TwitchVotingOverlay directory you will find an HTML file that can be viewed in your browser or added to OBS as a browser source that will receive messages from the websocket server on port 7890. The websocket server itself now runs by default when the server file is ran, and listens to port 7890. If you desire for some reason to change this, it will need to be changed in the corresponding HTML file as well.
 

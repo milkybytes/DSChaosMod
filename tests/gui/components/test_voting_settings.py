@@ -5,15 +5,17 @@ import tkinter as tk
 import configparser
 from TwitchVotingServer.config_handler.config_handler import ConfigHandler
 from TwitchVotingServer.gui.components.settings_tab import SettingsField, VotingSettings
+from tests.gui.components.tk_helper import get_root
+
 
 class TestVotingSettings(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.root = tk.Tk()
+        cls.root = get_root()
 
     @classmethod
     def tearDownClass(cls):
-        cls.root.destroy()
+        pass  # Shared root — must not be destroyed mid-session (Python 3.14+)
 
     def setUp(self):
         self.config_file = tempfile.NamedTemporaryFile(delete=False)

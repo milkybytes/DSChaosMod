@@ -1,13 +1,17 @@
 import unittest
 import tkinter as tk
-from TwitchVotingServer.gui.components.settings_tab import SettingsField 
+from TwitchVotingServer.gui.components.settings_tab import SettingsField
+from tests.gui.components.tk_helper import get_root
+
 
 class TestSettingsField(unittest.TestCase):
-    def setUp(self):
-        self.root = tk.Tk()
+    @classmethod
+    def setUpClass(cls):
+        cls.root = get_root()
 
-    def tearDown(self):
-        self.root.destroy()
+    @classmethod
+    def tearDownClass(cls):
+        pass  # Shared root — must not be destroyed mid-session (Python 3.14+)
 
     def test_get_default_value(self):
         sf = SettingsField(self.root, "Label")

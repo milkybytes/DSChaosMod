@@ -13,7 +13,7 @@ async-tkinter-loop = ">=0.6.0"
 twitchio = ">=2.5.0,<3.0.0"
 pymem = ">=1.8.3"
 psutil = "*"
-requests = "^2.32.4"
+requests = "^2.33.0"
 toml = "^0.10.2"
 
 [tool.poetry.group.dev.dependencies]
